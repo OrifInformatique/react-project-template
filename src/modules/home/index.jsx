@@ -5,11 +5,11 @@ import Link from '../../ui/link'
 import Title from '../../ui/title'
 
 const Home = () => {
-  return (<>
-    <Logo />
-    <Title className="pt-4 sm:pt-6 ">Section Informatique</Title>
-    <Link className="pt-4 sm:pt-6" to="contact">Contact</Link>
-  </>)
+	return (<>
+		<Logo />
+		<Title className="pt-4 sm:pt-6 m0">Section Informatique</Title>
+		<Link className="pt-4 sm:pt-6" to="contact">Contact</Link>
+	</>)
 }
 
 export default Home

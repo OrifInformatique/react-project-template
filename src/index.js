@@ -20,16 +20,16 @@ const root = createRoot(container);
 
 root.render(<BrowserRouter>
 
-    <Routes>
-      
-      <Route path="/" element={<MainLayout />}>
+	<Routes>
 
-        <Route index element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<Redirect to="/" />} />
-      
-      </Route>
+		<Route path="/" element={<MainLayout />}>
 
-    </Routes>
+			<Route index element={<Home />} />
+			<Route path="contact" element={<Contact />} />
+			<Route path="*" element={<Redirect to="/" />} />
+
+		</Route>
+
+	</Routes>
 
 </BrowserRouter>);
