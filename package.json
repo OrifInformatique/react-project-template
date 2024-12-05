@@ -1,5 +1,5 @@
 {
-  "name": "http-battles",
+  "name": "react-project-template",
   "version": "1.0.0",
   "description": "Template de départ pour un projet React/Tailwind, construit avec Webpack.",
   "main": "src/index.js",
@@ -29,6 +29,7 @@
     "@tailwindcss/forms": "^0.5.9",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
     "html-webpack-plugin": "^5.6.0",

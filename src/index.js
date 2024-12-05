@@ -18,7 +18,8 @@ import './index.pcss';
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-root.render(<BrowserRouter>
+
+root.render(<BrowserRouter basename={APP_ROOT}>
 
     <Routes>
       

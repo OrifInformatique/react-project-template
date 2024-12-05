@@ -1,7 +1,12 @@
 require('dotenv').config()
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+
+const APP_ROOT = process.env.APP_ROOT || '/';
 
 module.exports = {
     mode: 'development',
@@ -9,6 +14,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[fullhash].bundle.js',
+        publicPath: APP_ROOT,
         clean: true
     },
     target: 'web',
@@ -41,6 +47,14 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.tmpl.html')
+        }),
+        new webpack.DefinePlugin({
+            'APP_ROOT': JSON.stringify(APP_ROOT)
+        }),
+        new CopyPlugin({
+            patterns: [
+                "public"
+            ],
         })
     ]
 };
