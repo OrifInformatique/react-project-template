@@ -19,16 +19,13 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 
-root.render(<BrowserRouter basename={APP_ROOT}>
+root.render(<BrowserRouter basename={process.env.APP_ROOT}>
 
     <Routes>
-      
       <Route path="/" element={<MainLayout />}>
-
         <Route index element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<Redirect to="/" />} />
-      
       </Route>
 
     </Routes>

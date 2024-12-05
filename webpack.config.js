@@ -1,4 +1,4 @@
-require('dotenv').config()
+const dotenv = require('dotenv').config();
 
 const path = require('path');
 const webpack = require('webpack');
@@ -49,7 +49,7 @@ module.exports = {
             template: path.join(__dirname, 'src', 'index.tmpl.html')
         }),
         new webpack.DefinePlugin({
-            'APP_ROOT': JSON.stringify(APP_ROOT)
+            'process.env': JSON.stringify(dotenv.parsed),
         }),
         new CopyPlugin({
             patterns: [
